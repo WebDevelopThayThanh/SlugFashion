@@ -57,3 +57,12 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Cách chạy
+1. Mở MongoDB Compass, tạo database FashionData, collection Fashion,
+   rồi Import file my-server-mongodb/FashionData.Fashion.json.
+2. cd my-server-mongodb, npm install, node index.js (cổng 3002)
+3. Ở thư mục gốc: npm install, ng serve --proxy-config src/proxy.conf.json
+4. Mở http://localhost:4200/fashion-list
+
+Nội dung bài: cột IdF duy nhất, slug (/fashion/ten-bai-p1),
+trang danh sách và chi tiết.
