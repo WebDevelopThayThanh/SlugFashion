@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+<header class="topbar">
+  <a routerLink="/fashion-list" class="brand">👗 Fashion</a>
+
+  <nav class="main-nav">
+    <a routerLink="/fashion-list" routerLinkActive="active">Danh sách</a>
+    <a routerLink="/fashion-new" routerLinkActive="active">Thêm mới</a>
+    <a routerLink="/fashion-search" routerLinkActive="active">Tìm kiếm</a>
+    <a routerLink="/fashion-update" routerLinkActive="active">Cập nhật</a>
+    <a routerLink="/fashion-delete" routerLinkActive="active">Xóa</a>
+  </nav>
+
+  <details class="old-menu">
+    <summary>Bài tập cũ</summary>
+    <div class="old-links">
+      <a routerLink="/products">Products</a>
+      <a routerLink="/search-product">Search Products</a>
+      <a routerLink="/fakeproducts">Fake Products</a>
+      <a routerLink="/samplenested">Sample Nested</a>
+      <a routerLink="/course-register">Register Course</a>
+      <a routerLink="/course-reactive-register">Register Reactive Course</a>
+      <a routerLink="/contact">Contacts</a>
+      <a routerLink="/login">Login</a>
+      <a routerLink="/book-list">List Books</a>
+      <a routerLink="/book-detail">Book Detail</a>
+      <a routerLink="/book-new">Book New</a>
+      <a routerLink="/book-update">Book Update</a>
+      <a routerLink="/book-delete">Book Delete</a>
+      <a routerLink="/fashion-detail">Fashion Detail</a>
+    </div>
+  </details>
+</header>
+
+<main>
+  <router-outlet />
+</main>

@@ -3,18 +3,18 @@
     "id": 1,
     "name": "Martin",
     "price": 10.99,
-    "image_link": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200"
+    "image_link": "/assets/h2.png"
   },
   {
     "id": 2,
     "name": "Juhoon",
     "price": 19.99,
-    "image_link": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+    "image_link": "/assets/h3.png"
   },
   {
     "id": 3,
     "name": "James",
     "price": 5.99,
-    "image_link": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+    "image_link": "/assets/h1.png"
   }
 ]

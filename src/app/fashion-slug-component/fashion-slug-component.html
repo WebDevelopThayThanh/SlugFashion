@@ -1,0 +1,19 @@
+@if (fashion(); as f) {
+  <div class="detail-wrap">
+    <a routerLink="/fashion-list" class="back">← Quay lại danh sách</a>
+
+    <div class="detail-card">
+      <div class="detail-img">
+        <img [src]="f.fashion_image" [alt]="f.fashion_subject" />
+      </div>
+      <div class="detail-info">
+        <span class="badge">Mã #{{ f.IdF }}</span>
+        <h1>{{ f.fashion_subject }}</h1>
+        <p class="style">{{ f.style }}</p>
+        <p class="desc">{{ f.fashion_detail }}</p>
+      </div>
+    </div>
+  </div>
+} @else if (loading()) {
+  <p class="loading">Đang tải...</p>
+}

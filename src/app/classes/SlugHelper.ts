@@ -3,6 +3,7 @@
 export function createSlug(name: string, id: number): string {
   const sanitizedName = name
     .toLowerCase()
+    .replace(/đ/g, 'd')
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove Vietnamese accents
     .replace(/[^a-z0-9]+/g, '-') // Replace special characters with hyphens
     .replace(/(^-|-$)+/g, '');   // Trim hyphens from the start and end
@@ -31,4 +32,6 @@ export function getIdentityType(identity: string): 'ID' | 'SLUG_WITH_ID' | 'PURE
   }
   // 3. Otherwise, treat it as a pure text slug (e.g., "iphone-69-pro-max")
   return 'PURE_SLUG';
+  
 }
+

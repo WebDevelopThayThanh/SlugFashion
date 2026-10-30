@@ -1,0 +1,21 @@
+@if (errMessage()) {
+  <p class="error">{{ errMessage() }}</p>
+}
+
+<div class="list-wrap">
+  <h2 class="list-title">Bộ sưu tập thời trang</h2>
+  <div class="grid">
+    @for (f of fashions(); track f.IdF) {
+      <a class="card" [routerLink]="['/fashion', slugOf(f)]">
+        <div class="thumb">
+          <img [src]="f.fashion_image" [alt]="f.fashion_subject" />
+        </div>
+        <div class="body">
+          <span class="badge">#{{ f.IdF }}</span>
+          <h3>{{ f.fashion_subject }}</h3>
+          <p class="style">{{ f.style }}</p>
+        </div>
+      </a>
+    }
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<p>course-registration-reactive-component works!</p>
+<div class="container mt-4" style="max-width: 500px; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+  <!-- Use uppercase Pipe for the title-->
+  <form [formGroup]="regForm">
+    <h3 class="text-center mb-4">{{ "Course Registration" | uppercase }}</h3>
+
+    <!-- Name -->
+    <div class="mb-3">
+      <label class="form-label fw-bold" for="name">Name:</label>
+      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Enter your name">
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Email:</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="test@gmail.com">
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Password:</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+
+    <!-- Confirm password (confirmPass) -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Confirm Password:</label>
+      <input type="password" class="form-control" formControlName="confirmPass">
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-end gap-2 mt-4">
+      <button type="submit" class="btn btn-primary px-4">Register</button>
+      <button type="button" class="btn btn-secondary px-3">Default values</button>
+    </div>
+  </form>
+</div>

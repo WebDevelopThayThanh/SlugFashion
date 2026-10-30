@@ -1,0 +1,16 @@
+.detail-wrap { max-width: 1000px; margin: 30px auto; padding: 0 16px; font-family: system-ui, sans-serif; }
+.back { text-decoration: none; color: #555; }
+.back:hover { color: #000; }
+.detail-card {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 16px;
+  background: #fff; border-radius: 20px; padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+.detail-img img { width: 100%; border-radius: 16px; object-fit: cover; }
+.detail-info { display: flex; flex-direction: column; justify-content: center; }
+.badge { align-self: flex-start; background: #111; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 13px; }
+h1 { margin: 12px 0 6px; font-size: 32px; }
+.style { color: #e53935; font-size: 18px; font-weight: 700; margin: 0 0 12px; text-transform: uppercase; }
+.desc { color: #666; line-height: 1.7; white-space: pre-line; }
+.loading { text-align: center; padding: 60px; }
+@media (max-width: 700px) { .detail-card { grid-template-columns: 1fr; } }

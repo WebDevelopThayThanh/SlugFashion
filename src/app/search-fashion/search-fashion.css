@@ -1,0 +1,133 @@
+.fashion-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.search-panel {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-panel h2 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.flex-grow {
+  flex-grow: 1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #475569;
+}
+
+.form-group input, .form-group select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+.btn-wrapper {
+  justify-content: flex-end;
+}
+
+.btn-search {
+  height: 38px;
+  padding: 0 20px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-search:hover {
+  background-color: #1d4ed8;
+}
+
+.fashion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.fashion-table th, .fashion-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+
+.fashion-table th {
+  background-color: #1e293b;
+  color: white;
+}
+
+.fashion-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.score-cell {
+  font-size: 16px;
+}
+
+/* === CÁC CLASS ĐỊNH DẠNG MÀU THEO ĐÚNG ĐỀ BÀI === */
+/* [0.75 - 1]: Nền vàng + Chữ đỏ */
+.score-high {
+  background-color: #fff3cd !important;
+  color: #dc3545 !important;
+}
+
+/* [0.5 - 0.75): Nền hồng + Chữ xanh */
+.score-medium {
+  background-color: #fce4ec !important;
+  color: #0d6efd !important;
+}
+
+/* < 0.5: Nền đỏ + Chữ trắng */
+.score-low {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  background: #f8fafc;
+  border-radius: 6px;
+}

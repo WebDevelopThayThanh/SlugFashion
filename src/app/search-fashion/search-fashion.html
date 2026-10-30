@@ -1,0 +1,83 @@
+<div class="fashion-container">
+  <div class="search-panel">
+    <h2>Search Fashion Items</h2>
+
+    <div class="form-row">
+      <div class="form-group flex-grow">
+        <label>Search Query:</label>
+        <input 
+          type="text" 
+          [(ngModel)]="searchQuery" 
+          placeholder="Nhập từ khóa (vd: Summer Vintage Floral Dress)..." 
+          (keyup.enter)="onSearch()"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Search By:</label>
+        <select [(ngModel)]="searchField">
+          <option value="fashion_subject">fashion_subject</option>
+          <option value="fashion_detail">fashion_detail</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Metric:</label>
+        <select [(ngModel)]="similarityMetric">
+          <option value="cosine">Cosine Similarity</option>
+          <option value="jaccard">Jaccard Similarity</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Limit:</label>
+        <select [(ngModel)]="resultLimit">
+          <option [ngValue]="3">3 results</option>
+          <option [ngValue]="5">5 results</option>
+          <option [ngValue]="10">10 results</option>
+        </select>
+      </div>
+
+      <div class="form-group btn-wrapper">
+        <button class="btn-search" (click)="onSearch()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phần hiển thị danh sách -->
+  <div class="results-panel">
+    <h3>Results (Sorted Descending)</h3>
+
+    <table class="fashion-table" *ngIf="results.length > 0; else noData">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Image</th>
+          <th>Style</th>
+          <th>Fashion Subject</th>
+          <th>Fashion Detail</th>
+          <th>Similarity Score ({{ similarityMetric | uppercase }})</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of results" [ngClass]="getRowClass(item.similarityScore)">
+          <td class="bold">{{ item.id }}</td>
+          <td>
+            <img [src]="item.image" [alt]="item.fashion_subject" class="fashion-thumb" />
+          </td>
+          <td>{{ item.style }}</td>
+          <td>{{ item.fashion_subject }}</td>
+          <td>{{ item.fashion_detail }}</td>
+          <td class="bold score-cell">{{ item.similarityScore }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #noData>
+      <div class="empty-state">
+        <p *ngIf="!hasSearched">Vui lòng nhập từ khóa và nhấn nút Search.</p>
+        <p *ngIf="hasSearched">Không tìm thấy kết quả phù hợp.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
